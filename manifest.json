@@ -5,7 +5,9 @@
     "browser_action": {
         "default_popup": "popup.html"
     },
-    "permissions": [
-        "tabs"
-    ]
+    "icons": {
+        "16" : "images/gg16.png",
+        "48" : "images/gg48.png",
+        "128": "images/gg128.png"
+    }
 }
