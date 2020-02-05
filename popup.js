@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('button').addEventListener('click', onclick, false)
+    document.querySelector('button').addEventListener('click', 
+    onclick, false)
 
     function onclick () {
-        alert(generateUuid());
+        chrome.tabs.query({currentWindow: true, active: true},
+            function (tabs) {
+                console.log("made it here");
+                chrome.tabs.sendMessage(tabs[0].id, generateUuid())
+            })
+        //alert(generateUuid());
     }
 
     // Public Domain/MIT
