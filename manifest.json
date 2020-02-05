@@ -1,6 +1,7 @@
 {
     "name": "GuidGenerator",
-    "version": "1.0",
+    "short_name": "GuidGen",
+    "version": "1.0.0",
     "manifest_version": 2,
     "content_scripts": [
         {
@@ -18,6 +19,6 @@
         "128": "images/gg128.png"
     },
     "permissions": [
-        "tabs"
+        "activeTab"
     ]
 }
