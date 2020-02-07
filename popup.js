@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function onclick () {
         chrome.tabs.query({currentWindow: true, active: true},
-            function (tabs) {
-                console.log("made it here");
-                chrome.tabs.sendMessage(tabs[0].id, generateUuid())
+            function (tab) {
+                chrome.tabs.sendMessage(tab[0].id, generateUuid())
             })
         //alert(generateUuid());
     }
@@ -28,4 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
         });
     }
+
+
 }, false)

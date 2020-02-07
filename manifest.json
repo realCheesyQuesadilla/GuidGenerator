@@ -9,9 +9,21 @@
             "js": ["content.js"]
         }
     ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
     "browser_action": {
         "default_popup": "popup.html",
         "default_title": "GuidGenerator"
+    },
+    "commands": {
+        "generate": {
+            "suggested_key": {
+                "default": "Alt+Shift+G"
+            },
+            "description": "Generate a Guid"
+        }
     },
     "icons": {
         "16" : "images/gg16.png",
