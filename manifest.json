@@ -1,7 +1,7 @@
 {
     "name": "GuidGenerator",
     "short_name": "GuidGen",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "manifest_version": 2,
     "content_scripts": [
         {
