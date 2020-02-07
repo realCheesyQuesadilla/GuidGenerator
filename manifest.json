@@ -1,7 +1,7 @@
 {
     "name": "GuidGenerator",
     "short_name": "GuidGen",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "manifest_version": 2,
     "content_scripts": [
         {
@@ -29,6 +29,12 @@
                 "default": "Alt+Shift+G"
             },
             "description": "Generate a Guid"
+        },
+        "copyGuid": {
+            "suggested_key": {
+                "default": "Alt+Shift+C"
+            },
+            "description": "Copy a Guid to clipboard"
         }
     },
     "icons": {
@@ -37,6 +43,7 @@
         "128": "images/gg128.png"
     },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "clipboardWrite"
     ]
 }
